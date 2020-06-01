@@ -53,7 +53,7 @@ class Home extends Component{
     .catch(error=>{
       console.log(error);
     })
-    axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${x.Key}?apikey=BLR4FtfiPWw7LDXcaz6VeCxUHHx73UIX`)
+    axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${x.Key}?apikey=MtFArvjR2ZCwarVZ1Vg83FpkwuBraiyQ`)
     .then(response=>{
       this.setState({
         hour:response.data,
@@ -63,7 +63,7 @@ class Home extends Component{
     .catch(err=>{
       console.log(err);
     })
-    axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${x.Key}?apikey=BLR4FtfiPWw7LDXcaz6VeCxUHHx73UIX`)
+    axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${x.Key}?apikey=MtFArvjR2ZCwarVZ1Vg83FpkwuBraiyQ`)
     .then(response=>{
       this.setState({
         ctemp:response.data,

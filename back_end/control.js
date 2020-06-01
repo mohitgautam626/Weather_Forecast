@@ -16,7 +16,7 @@ app.post('/details',urlencodedParser,function(req,res){
   var city=req.body.city;
   console.log(`${city} node listening react`);
   request(
-    `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=BLR4FtfiPWw7LDXcaz6VeCxUHHx73UIX&q=${city}`,
+    `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=MtFArvjR2ZCwarVZ1Vg83FpkwuBraiyQ&q=${city}`,
     function(error,response,body){
       if(!error && response.statusCode==200){
         var item=JSON.parse(body);
@@ -30,7 +30,7 @@ app.post('/data',urlencodedParser,function(req,res){
   var select=req.body.key;
   console.log(`listening ${select} key`);
   request(
-    `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${select}?apikey=BLR4FtfiPWw7LDXcaz6VeCxUHHx73UIX`,
+    `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${select}?apikey=MtFArvjR2ZCwarVZ1Vg83FpkwuBraiyQ`,
     function(error,response,body){
       if(!error && response.statusCode==200){
         var det=JSON.parse(body);
